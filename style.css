@@ -102,6 +102,7 @@ ul li a {
 	width:30%;
 	height:800px;
 	border-left:none;
+  display: inline-block;
 }
 #both{
 	clear:both;
