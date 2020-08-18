@@ -1,76 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Show Image using URLs from JSON file using JavaScript</title>
-    <style>
-        #birds {
-            width: 200px;
-            text-align: center;
-            overflow: hidden;
-            padding: 3px;
-            font: 14px Calibri;
-            border:solid 1px #ddd;
-        }
-        #birds div {
-            margin: 0;
-            width: 49%;
-            float: left;
-            text-align: center;
-        }
-
-        #birds div img {
-            border: none;
-            width: 51px;
-            height: 51px;
-        }
-    </style>
+    <title>Convert String to JSON using JavaScript</title>
 </head>
 <body>
-    <p><input type="button" onclick="showDataWithImages()" value="Show Images" /></p>
-    <div id='birds'></div>
+    <p>You can change the defaul Name values with any other value and see the output!</p>
+
+    <pre id="jsonData" contenteditable
+        style="border:solid 1px #CCC;padding:0 5px;">
+
+[
+    {
+        "ID": "001",
+        "Name": "Angular",
+        "Image": "img/dark.jpg"
+    },
+
+    {
+        "ID": "002",
+        "Name": "JSON",
+        "Image": "img/logo.png"
+    },
+
+    {
+        "ID": "003",
+        "Name": "shaw.Net",
+        "Image": "img/shaw.jpg"
+    }
+]
+    </pre>
+
+    <p>
+        <input type="button" id="btClick" value="String to JSON" onclick="str2json()" />
+    </p>
+    <p id="data"></p>
 </body>
 <script>
-    function showDataWithImages() {
+    function str2json() {
+        var a = document.getElementById('jsonData').innerHTML;
+        var jsonObj = JSON.parse(a);
 
-        var oXHR = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
-
-        function reportStatus() {
-            if (oXHR.readyState == 4)               // Request completed.
-                showTheList(this.responseText);     // All set. Now show the data.
-        }
-
-        oXHR.onreadystatechange = reportStatus;
-        oXHR.open("GET", "img.js", true);   // true = asynchronous request, false = synchronous request.
-        oXHR.send();
-
-        function showTheList(json) {
-            var arrItems = [];
-            arrItems = JSON.parse(json); 	// Populate array with JSON data.
-
-            var div = document.getElementById('birds');     // The parent <div>.
-            div.innerHTML = '';
-
-            // Loop through data in the JSON array.
-            for (i = 0; i <= arrItems.length - 1; i++) {
-
-                // Create two <div> elements, one for the name and the other to show the image.
-                var divLeft = document.createElement('div');
-                divLeft.innerHTML = arrItems[i].Name;
-
-                var img = document.createElement('img');    // Create an <img> element.
-                img.src = arrItems[i].Image;                // The image source from JSON array.
-
-                var divRight = document.createElement('div');
-                divRight.setAttribute('style', 'border-left: solid 1px #ddd;');
-                divRight.appendChild(img);
-
-                // Add the child DIVs to parent DIV.
-                div.appendChild(divLeft);
-                div.appendChild(divRight);
-
-                // Note: Instead of <div>, you can also create a dynamic <table> to show the images.
-                // Here's an example ... https://www.encodedna.com/javascript/populate-json-data-to-html-table-using-javascript.htm
-            }
+        document.getElementById('data').innerHTML = '';
+        for (i = 0; i < jsonObj.length; i++) {
+            document.getElementById('data').innerHTML =
+                document.getElementById('data').innerHTML + '<br /> ' + jsonObj[i].Image;
         }
     }
 </script>

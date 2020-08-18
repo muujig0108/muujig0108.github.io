@@ -2,8 +2,9 @@
  <html>
  <head>
     <title>Show Image from JSON using jQuery</title>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    
+
      <style>
         table, input
         {
@@ -28,11 +29,33 @@
 <body>
     <p><input type="button" id="btShowImage" value="Click to Show Images" /></p>
     <div id='showData'></div>
+    <script type="text/javascript" class="json">
+      [
+          {
+              "ID": "001",
+              "Name": "Angular",
+              "Image": "img/dark.jpg"
+          },
+
+          {
+              "ID": "002",
+              "Name": "JSON",
+              "Image": "img/logo.png"
+          },
+
+          {
+              "ID": "003",
+              "Name": "shaw.Net",
+              "Image": "img/shaw.jpg"
+          }
+      ]
+
+    </script>
 </body>
 <script>
     $(document).ready(function () {
     	$('#btShowImage').click(function () {
-		    $.getJSON("img.json", function (data) {
+		    $.getJSON(".json", function (data) {
 
                 var arrItems = [];      // The array to store JSON items.
                 $.each(data, function (index, value) {
