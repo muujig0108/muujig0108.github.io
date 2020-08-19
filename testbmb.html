@@ -69,7 +69,7 @@
 <div class="numbertext">3 / 3</div>
 <img src="img/dark1.jpeg" style="width:100%">
 <div class="fuck">
-<div class="text">Caption Three</div>
+<div class="text">The Dark Knight</div>
 <div class="logos"><img src="img/darkknight.jpg" width="180px"></div>
 <div class="play"></div>
 </div>
@@ -79,7 +79,12 @@
 <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
 </div>
-<br>
+<div style="text-align:center">
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+</div>
+
 
 
 
@@ -109,6 +114,27 @@
     });
   </script>
   <script src="js/js-slide.js"></script>
+  <script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 3000); // Change image every 2 seconds
+}
+</script>
   <!-- js duusaw -->
 </body>
 

@@ -12,7 +12,7 @@ body{
 nav{
   background: #1f1f1f;
   height: 57px;
-  width: 100%;
+  width: 150%;
   display:table;
 }
 .logo{
@@ -65,7 +65,7 @@ nav{
 }
 .navbar ul{
 	position:absolute;
-  width: 800px;
+  width: 100%;
   background: #1f1f1f;
   overflow: hidden;
   margin-top: 60px;
@@ -75,16 +75,16 @@ nav{
   max-height: 0;
 }
 ul li {
-  padding: 10px;
+  padding: 0px;
   border-bottom:1px solid black;
-  display:inline-block;
+  line-height: 300%;
+  display:block;
 }
 ul li a {
   color: #f0f0f0;
   text-decoration: none;
-  line-height:30%;
   font-weight: 700;
-  margin-left:30%;
+  margin-left:3%;
   transition: color 0.3s;
   text-transform: uppercase;
 }
@@ -115,6 +115,7 @@ ul li a {
 #fuckingright{
 	width:30%;
 	height:100%;
+  margin-top:0%;
 	border-left:none;
   display: inline-block;
 }
@@ -156,13 +157,14 @@ cursor: default;
 .mySlides img{
   display:block;
   position:relative;
-  -webkit-transition:all .4s linear;
-  transition:all .4s linear;
+  -webkit-transition:all .0s linear;
+  transition:all .3s linear;
 }
 .mySlides:hover img{
-  -ms-transform:scale(1.2);
--webkit-transform:scale(1.2);
-transform:scale(1.2);
+  -ms-transform:scale(0.2);
+-webkit-transform:scale(0.2);
+transform:scale(1.1);
+filter: brightness(70%);
 }
 
 /* Next & previous buttons */
@@ -195,8 +197,8 @@ background-color: rgba(0,0,0,0.8);
 /* Caption text */
 .text {
 color: #f2f2f2;
-font-size: 4em;
-left: 40%;
+font-size: 2em;
+left: 50%;
 padding: 8px 12px;
 position: relative;
 margin-top: 120px;
@@ -206,6 +208,11 @@ width: 50%;
 transform:translatey(-100px);
 -webkit-transition:all .2s ease-in-out;
 transition:all .2s ease-in-out;
+}
+.text:hover{
+  font-size: 3em;
+  filter: none;
+  color: red;
 }
 /* Number text (1/3 etc) */
 .numbertext {
@@ -224,13 +231,22 @@ top: 0;
   margin-left: 10px;
 }
 .play{
-  width: 140px;
-  position: absolute;
-  top: 70%;
-  margin-left: 30%;
+  position: relative;
+background: url(./img/playwhite.png);
+background-repeat: no-repeat;
+background-size: 110px 110px;
+height: 200%;
+margin-top: -150px;
+margin-left: 230px;
+transition: 1s ease;
 }
-.play img{
-  color: white;
+.play:hover{
+  background: url(./img/play.png);
+  background-repeat: no-repeat;
+  background-size: 120px 120px;
+  height: 200%;
+  margin-top: -150px;
+  margin-left: 230px;
 }
 
 /* The dots/bullets/indicators */
@@ -241,7 +257,7 @@ width: 15px;
 margin: 0 2px;
 background-color: #bbb;
 border-radius: 50%;
-display: inline-block;
+display:none;
 transition: background-color 0.6s ease;
 }
 
@@ -268,12 +284,20 @@ to {opacity: 1}
 }
 
 /* On smaller screens, decrease text size */
-@media only screen and (max-width: 680px) {
+
+@media only screen and (max-width: 1000px) {
+  nav{ height: 60px}
+  #oppa{margin-left: 1%;margin-right: 1%;}
 .prev, .next,.text {font-size: 20px}
 .logos img {width: 60px}
 #fuckingleft{
+  margin-top: 0.2px;
   width: 100%;
   float:none;
+  height: 100%;
+}
+#fuckingright{
+  width: 100%;
 }
 .fuck{
   height:60px;
@@ -285,5 +309,15 @@ to {opacity: 1}
 }
 .fuck .text{
   margin-top:100px;
+}
+.play{
+  background-size: 50px 50px;
+  margin-left: 80px;
+  margin-top: -50px;
+}
+.play:hover{
+  background-size: 50px 50px;
+  margin-left: 80px;
+  margin-top: -50px;
 }
 }
