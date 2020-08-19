@@ -141,11 +141,28 @@ cursor: default;
 .slideshow-container a:hover{
   border: 2px solid white ;
 }
+.fuck{
+  border: none;
+  width: 100%;
+  height: 200px;
+  position:absolute;
+  display: block;
+  margin-top: -200px;
+  background: rgba(0,0,0,0.6);
+}
+.fuck:hover{
+  box-shadow:0 0 5px #fff;
+}
 .mySlides img{
   display:block;
   position:relative;
   -webkit-transition:all .4s linear;
   transition:all .4s linear;
+}
+.mySlides:hover img{
+  -ms-transform:scale(1.2);
+-webkit-transform:scale(1.2);
+transform:scale(1.2);
 }
 
 /* Next & previous buttons */
@@ -181,11 +198,9 @@ color: #f2f2f2;
 font-size: 4em;
 left: 40%;
 padding: 8px 12px;
-position: absolute;
-bottom: 0px;
+position: relative;
+margin-top: 120px;
 width: 50%;
-bottom: -80px; 
-background:rgba(0,0,0,0.6);
 -webkit-transform:translatey(-100px);
 -ms-transform:translatey(-100px);
 transform:translatey(-100px);
@@ -204,9 +219,9 @@ top: 0;
 }
 /* this is z index 3d */
 .logos {
-  position: absolute;
-  bottom: 3px;
-  z-index: 1;
+  position: relative;
+  margin-top: -300px;
+  margin-left: 10px;
 }
 .play{
   width: 140px;
@@ -256,5 +271,19 @@ to {opacity: 1}
 @media only screen and (max-width: 680px) {
 .prev, .next,.text {font-size: 20px}
 .logos img {width: 60px}
-
+#fuckingleft{
+  width: 100%;
+  float:none;
+}
+.fuck{
+  height:60px;
+  margin-top: -60px;
+  width: 100%;
+}
+.fuck .logos{
+  margin-top: -190px;
+}
+.fuck .text{
+  margin-top:100px;
+}
 }
