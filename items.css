@@ -1,0 +1,82 @@
+.boddy{
+  background: rgba(15, 15, 15,0.80);;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+
+}
+.items{
+  border-collapse: collapse;
+  width: 80%;
+}
+td {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 0;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+#myTable{
+    width: 100%;
+
+}
+#myTable td img{
+    width: 100%;
+    height: 330px;
+    padding: 12px;
+    margin-right: 0px;
+}
+#myInput{
+  margin-top: 12px;
+  margin-left: 20px;
+  height: 35px;
+  width: 700px;
+  border-radius: 5px;
+}
+/* Hailtiin css table */
+#myTable2 td img{
+    width: auto;
+    height: 330px;
+    padding: 12px;
+    margin-right: 0px;
+}
+
+@media only screen and (max-width: 600px) {
+   .items th{
+  width: 100%;
+}
+#myIn{
+  bottom: 50px;
+  margin-left: 88%;
+  height: 45px;
+  width: 45px;
+  border-radius: 5px;
+}
+#myText{
+  margin-top:12px;
+  position: center;
+}
+nav {
+  background: #1f1f1f;
+
+  width: 100%;
+  display:table;
+}
+form{
+  height: 100%;
+}
+ .midname{
+  text-align: center;
+}
+#myTable2 td img{
+    width: 20%;
+    height: auto;
+    padding: 12px;
+    margin-right: 0px;
+}
+}

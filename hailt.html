@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>WP MOVIE</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="red.css">
+
+
+
+
+  <link rel="stylesheet" href="items.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+
+
+
+</head>
+
+<body >
+  <style>
+  table {
+    width: 80%;
+  }
+.plaay img{
+  width: 10px;
+}
+  @media(max-width: 500px){
+    #myTable2 td img{
+      width: 100%;
+
+    }
+
+    #myInput{
+      width: 80%;
+      margin-bottom: 10px;
+    }
+    table{
+      width: 90%;
+    }
+  }
+  </style>
+
+  <!-- deed heseg -->
+  <nav>
+  <div class="navbar">
+    <a href="index.html">
+		<div class="logo">
+		</div>
+	</a>
+		<div id="btn">
+			<a href="#">
+			<span></span>
+			<span></span>
+			<span></span>
+			<p><b>Menu</b></p>
+			</a>
+		</div>
+		<ul class="menu">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="hailt.html">Search</a></li>
+			<li><a href="#">Services</a></li>
+			<li><a href="#">Contact</a></li>
+			<li><a href="#">Feedback</a></li>
+		</ul>
+	</div>
+
+  <input id="myInput" type="text" placeholder="Search..">
+
+</nav>
+<!-- deed heseg duusaw -->
+
+
+
+<table>
+  <div class="items">
+  <thead>
+  <tr>
+    <th>Poster</th>
+    <th>kino</th>
+    <th>Taniltsuulga</th>
+
+  </tr>
+  </thead>
+  <tbody id="myTable2">
+  <tr id="mur2">
+    <tr>
+      <td><a class="moviecss" href="https://ok.ru/video/514584939114"><img src="img/shawshank.jpg"  ></a></td>
+      <td><p><a href="https://ok.ru/video/514584939114">The Shawshank Redemption</a></p></td>
+      <td>july@greatstuff.com</td>
+    </tr>
+    <tr>
+      <td><a class="moviecss" href="https://ok.ru/video/1912143481476"><img src="img/godfather.jpg"  ></a></td>
+      <td><p><a href="https://ok.ru/video/1912143481476">The Godfather</a></p></td>
+      <td>july@greatstuff.com</td>
+    </tr>
+    <tr>
+      <td><a class="moviecss" href="https://ok.ru/video/1912144595588"><img src="img/darkknight.jpg"  ></a></td>
+      <td><p><a href="https://ok.ru/video/1912144595588">The Dark Knight</a></p></td>
+      <td>july@greatstuff.com</td>
+    </tr>
+    <tr>
+      <td><a class="moviecss" href="#"><img src="img/fightclub.jpg"  ></a></td>
+      <td><p><a href="html_images.asp">The Fight Club</a></p></td>
+      <td>july@greatstuff.com</td>
+    </tr>
+  <tr>
+    <td><a class="moviecss" href="#"><img src="img/darkknight.jpg"  ></a></td>
+    <td><p><a href="html_images.asp">The Dark Knight</a></p></td>
+    <td>july@greatstuff.com</td>
+  </tr>
+  <tr>
+    <td><a class="moviecss" href="#"><img src="img/darkknight.jpg"  ></a></td>
+    <td><p><a href="html_images.asp">The Dark Knight</a></p></td>
+    <td>july@greatstuff.com</td>
+  </tr>
+  <tr>
+    <td><a class="moviecss" href="#"><img src="img/darkknight.jpg"  ></a></td>
+    <td><p><a href="html_images.asp">The Dark Knight</a></p></td>
+    <td>july@greatstuff.com</td>
+  </tr>
+  </tr>
+  </tbody>
+  </div>
+</table>
+
+  <!-- ih biy duussan -->
+
+  <!-- js bulan -->
+  <script type="text/javascript">
+    $("#btn").on("click", function() {
+      $('.menu').toggleClass("show");
+    });
+      </script>
+
+
+  <!-- js duusaw -->
+</body>
+<script src="p.js"></script>
+</html>

@@ -1,0 +1,50 @@
+.mur2table{
+		display: none;
+	}
+/*responsive*/
+
+@media(max-width: 500px){
+.mur2table{
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.mur2table td {
+  padding:12px 15px;
+  border:1px solid #ddd;
+  text-align: center;
+  font-size:16px;
+
+}
+.mur2table td img{
+  width:100%;
+
+}
+
+.mur2tableth{
+	background-color: darkblue;
+	color:#ffffff;
+}
+
+.mur2table tbody tr:nth-child(even){
+	background-color: #f5f5f5;
+}
+.mur5table{
+		display: none;
+	}
+.mur2table{
+		display: inline;
+	}
+  .mur2table{
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.mur2table td {
+  padding:12px 15px;
+  border:1px solid #ddd;
+  text-align: center;
+  font-size:16px;
+
+}
+}

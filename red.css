@@ -1,3 +1,11 @@
+/* tun udahgui */
+#udahgui{
+  left:-50px;
+  top:50px;
+  display: block;
+}
+
+
 *{
   padding: 0;
   margin: 0;
@@ -12,8 +20,8 @@ body{
 }
 nav{
   background: #1f1f1f;
-  height: 57px;
-  width: 150%;
+  height: 0px;
+  width: 100%;
   display:table;
 }
 .logo{
@@ -102,15 +110,48 @@ ul li:hover a{
 	max-width:100%;
   z-index: 1;
 }
-@media only screen and(min-width:600px) {
+/* search bar css */
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  left: 1%;
+  width: 70%;
+  background: #f1f1f1;
+  top: 8px;
+}
 
+form.example button {
+  width: 50px;
+  background: #000000;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+  position: relative;
+  left:0px;
+  margin-top: 8px;
+  height: 42px;
 
 }
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
 #oppa{
-	background:white;
+	background:black;
 	margin-left:3%;
 	margin-right:3%;
-	margin-top:1.5%;
+	margin-top:%;
 	box-sizing:border-box;
 	border-radius:3px;
 }
@@ -127,6 +168,7 @@ ul li:hover a{
   margin-top:0%;
 	border-left:none;
   display: inline-block;
+  color: white;
 }
 #both{
 	clear:both;
@@ -284,7 +326,37 @@ animation-duration: 1.5s;
 #fuckingright{
   background: rgba(15, 15, 15,0.80);
   width: 100%;
-  height: 100%;
+  height:600px;
+  display: block;
+}
+#sda{
+  width: 100%;
+  height: 60px;
+  background: black
+  color:yellow;
+}
+#sda h1{
+  text-align: center;
+  color: yellow;
+  text-shadow: 1px solid black;
+}
+#contentright{
+      margin-top: 10px;
+}
+#contentright h1{
+  font-size: 30px;
+  color: white;
+}
+#contentright img{
+  width: 150px;
+  height: 220px;
+  margin-left: 130px;
+}
+#udahgui{
+  margin-bottom: 100px;
+}
+.moviecss:hover a{
+  filter: alpha(opacity=80);
 }
 @-webkit-keyframes fade {
 from {opacity: .4}
@@ -339,5 +411,30 @@ to {opacity: 1}
   background-size: 50px 50px;
   margin-left: 80px;
   margin-top: -50px;
+}
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 15px;
+  border: 1px solid grey;
+  left: 1%;
+  width: 48%;
+  background: #f1f1f1;
+  top: 1%;
+  float: right;
+  margin-right: 6%;
+}
+form.example button {
+  width: 5%;
+  background: #000000;
+  color: white;
+  font-size: 15px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+  position:relative;
+  left: 0;
+  margin-top: 1px;
+  height: 42px;
+  float: right;
 }
 }
